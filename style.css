@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800&display=swap');
+* {
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: white;
+	border: 2px solid rgba(255, 255, 255, .2);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container2{
+    background-color: white;
+	border: 2px solid rgba(255, 255, 255, .2);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border: 1px solid #000000;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input{
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+
+input:focus{
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none; 
+}
+
+.btn_login{
+    margin: 15px;
+    padding: 12px;
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid dodgerblue;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn_login:hover {
+    color: #000000;
+    background-color: white;
+    border: 1px solid dodgerblue;
+}
+
+.btn_action{
+    text-decoration: none;
+    background-color: #43C59E;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    border: 1px solid #43C59E;
+}
+
+.btn_action:hover{
+    background-color: white;
+    border: 1px solid #43C59E;
+    color: #000000;
+}

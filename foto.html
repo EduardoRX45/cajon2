@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomar Foto con JavaScript</title>
+    <style>
+        video, canvas {
+            width: 100%;
+            max-width: 400px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tomar Foto con la Cámara</h2>
+    <video id="video" autoplay></video>
+    <button id="capture">📸 Tomar Foto</button>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        // Accedemos a los elementos HTML
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const captureButton = document.getElementById('capture');
+        const context = canvas.getContext('2d');
+
+        // Solicita acceso a la cámara
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                video.srcObject = stream;
+            })
+            .catch(error => {
+                console.error("Error al acceder a la cámara: ", error);
+            });
+
+        // Captura la imagen al presionar el botón
+        captureButton.addEventListener('click', () => {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        });
+    </script>
+
+</body>
+</html>
